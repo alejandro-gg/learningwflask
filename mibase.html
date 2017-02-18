@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> {{ title or "Mi App Favo"}} </title>  <!-- nota que "or" (nota tiene que estar en minusculas) es un keyword/reservedword in Python ...  in this case we used "or" so that in case a "title" variable is not provided then it would fall back on a default string "Mi App Favo" for title -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    probando escribir en html... en este caso, dentro del "head" section (nota esta linea es parte del mibase.html)
+  </head>
+  <body>
+    <br><br><br>
+    {% block content %} {# asi se anade un comment en jinja...  nota que si pones el comment-escape-character-sequence for html, jinja won't dectect it and still will read/evaluate it as actual code, instead of taking it as a comment #}
+      esta es la parte de contenido de la app...
+    {% endblock %}
+    </body>
+</html>
